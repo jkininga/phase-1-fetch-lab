@@ -1,5 +1,11 @@
+const { Body } = require("node-fetch");
+
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
+  
+ return fetch('https://anapioficeandfire.com/api/books').then((Response)=> Response.json()).then(renderBooks);
+
+
+  
   
 }
 
@@ -15,3 +21,4 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
+
